@@ -7,3 +7,11 @@
   width: calc(100% - var(--nav-width) - 20px);
   min-width: 400px;
 }
+
+@media screen and (max-width: 620px) {
+  .section {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: unset;
+  }
+}
