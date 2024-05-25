@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import { Nunito } from 'next/font/google';
 import './globals.css';
+import ReactQueryProvider from './_lib/queryProvider';
 
-const inter = Nunito({ subsets: ['cyrillic', 'latin'] });
+const nunito = Nunito({ subsets: ['cyrillic', 'latin'] });
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,8 +16,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="ru">
+      <ReactQueryProvider>
+        <body className={nunito.className}>{children}</body>
+      </ReactQueryProvider>
     </html>
   );
 }
