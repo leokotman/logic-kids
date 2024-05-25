@@ -2,10 +2,16 @@
 
 import styles from './page.module.css';
 import { useCoursesQuery } from './_lib/hooks';
+import { Filter } from './_components/filter/filter';
+import { Courses } from './_components/courses/courses';
 
 export default function Home() {
   const { data: courses = [] } = useCoursesQuery();
-  console.log('data', courses);
 
-  return <main className={styles.main}></main>;
+  return (
+    <main className={styles.main}>
+      <Filter courses={courses} />
+      <Courses courses={courses} />
+    </main>
+  );
 }

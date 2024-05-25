@@ -1,18 +1,10 @@
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
-import { Tag } from './types';
+import { ICourse } from './types';
 
 const COURSES_URL = 'https://logiclike.com/docs/courses.json';
 
-interface ICourse {
-  name: string;
-  id: string;
-  image: string;
-  bgColor: string;
-  tags: Array<Tag>;
-}
-
-export const getCourses = async (): Promise<Array<ICourse>> => {
+export const getCourses = async (): Promise<ICourse[]> => {
   const result = await axios({
     method: 'GET',
     url: COURSES_URL,

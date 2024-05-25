@@ -5,3 +5,11 @@ export type Tag =
   | 'Окружающий мир'
   | 'Загадки'
   | 'Страны и столицы';
+
+export interface ICourse {
+  name: string;
+  id: string;
+  image: string;
+  bgColor: string;
+  tags: Array<Tag>;
+}
