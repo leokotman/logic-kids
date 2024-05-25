@@ -1,26 +1,30 @@
-import { ICourse } from '@/app/_lib/types';
-import { useMemo } from 'react';
-import { flatten } from 'lodash';
+import { isEqual } from 'lodash';
 
+import styles from './filter.module.scss';
+import { Button } from '../button/button';
 interface IFilterProps {
-  courses: ICourse[];
+  topics: string[];
+  chosenTag: string;
+  setChosenTag: (tag: string) => void;
 }
 
 export const Filter = (props: IFilterProps) => {
-  const { courses } = props;
-  const topics = useMemo(() => {
-    const allTopics = flatten(
-      courses.map((course) => course.tags.map((tag) => tag))
-    );
-    return [...new Set(allTopics)];
-  }, [courses]);
-  console.log('topics: ', topics);
+  const { topics, chosenTag, setChosenTag } = props;
 
   return (
-    <nav>
-      {topics.map((topic, index) => (
-        <p key={index}>{topic}</p>
-      ))}
+    <nav className={styles.nav}>
+      {topics.map((topic, index) => {
+        const isActive = isEqual(chosenTag, topic);
+        return (
+          <Button
+            key={index}
+            classes={isActive ? styles.active : ''}
+            onTagClick={() => setChosenTag(topic)}
+          >
+            {topic}
+          </Button>
+        );
+      })}
     </nav>
   );
 };

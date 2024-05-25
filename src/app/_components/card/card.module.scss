@@ -1,4 +1,18 @@
 .article {
   border: 1px solid black;
-  padding: 1rem;
+  border-radius: 18px;
+  max-width: 200px;
+  box-shadow: 0px 10px 13px -4px rgba(35, 35, 95, 0.19);
+  color: rgba(57, 65, 75, 1);
+  min-height: 210px;
+}
+.figure {
+  display: flex;
+  flex-direction: column;
+}
+.figcaption {
+  background-color: white;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  height: 30%;
 }

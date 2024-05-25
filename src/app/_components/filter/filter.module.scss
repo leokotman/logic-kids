@@ -1,0 +1,10 @@
+.nav {
+  display: flex;
+  flex-direction: column;
+  color: rgba(57, 65, 75, 1);
+}
+
+.active {
+  background-color: green;
+  color: white;
+}
