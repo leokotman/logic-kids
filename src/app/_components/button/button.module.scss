@@ -1,0 +1,20 @@
+.button {
+  border: 1px solid transparent;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.active {
+  background-color: green;
+  color: white;
+}
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+  .button:hover {
+    background: rgba(0, 0, 0, 0.05);
+    color: var(--text-color);
+  }
+}
