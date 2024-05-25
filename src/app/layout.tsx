@@ -14,14 +14,6 @@ export const metadata: Metadata = {
     description: 'LogicLike courses for kids 5-12 years',
     siteName: 'LogicLike courses',
     url: 'https://logic-kids.vercel.app/',
-    images: [
-      {
-        url: 'public/og_preview.webp',
-        width: 800,
-        height: 600,
-        alt: 'LogicLike preview',
-      },
-    ],
   },
 };
 
