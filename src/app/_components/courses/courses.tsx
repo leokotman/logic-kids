@@ -1,6 +1,6 @@
 import { ICourse } from '@/app/_lib/types';
 import { Card } from '../card/card';
-
+import styles from './courses.module.scss';
 interface ICoursesProps {
   courses: ICourse[];
 }
@@ -9,7 +9,7 @@ export const Courses = (props: ICoursesProps) => {
   const { courses } = props;
 
   return (
-    <section>
+    <section className={styles.section}>
       {courses.map((course) => {
         return (
           <Card
