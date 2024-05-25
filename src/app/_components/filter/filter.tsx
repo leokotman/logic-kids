@@ -18,8 +18,8 @@ export const Filter = (props: IFilterProps) => {
         return (
           <Button
             key={index}
-            classes={isActive ? styles.active : ''}
             onTagClick={() => setChosenTag(topic)}
+            isActive={isActive}
           >
             {topic}
           </Button>

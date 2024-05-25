@@ -13,7 +13,7 @@ export const Card = (props: ICardProps) => {
   return (
     <article className={styles.article} style={{ backgroundColor: bgColor }}>
       <figure className={styles.figure}>
-        <Image src={src} alt={alt} width={40} height={70} />
+        <Image src={src} alt={alt} width={144} height={144} />
         <figcaption className={styles.figcaption}>
           <h2>{title}</h2>
         </figcaption>
