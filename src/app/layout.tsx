@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     type: 'website',
     description: 'LogicLike courses for kids 5-12 years',
     siteName: 'LogicLike courses',
-    url: 'http://localhost:3000/', // change to deployed url
+    url: 'https://logic-kids.vercel.app/',
     images: [
       {
         url: 'public/og_preview.webp',
