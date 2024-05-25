@@ -8,6 +8,21 @@ const nunito = Nunito({ subsets: ['cyrillic', 'latin'] });
 export const metadata: Metadata = {
   title: 'LogicLike',
   description: 'LogicLike courses for kids 5-12 years',
+  openGraph: {
+    title: 'LogicLike courses',
+    type: 'website',
+    description: 'LogicLike courses for kids 5-12 years',
+    siteName: 'LogicLike courses',
+    url: 'http://localhost:3000/', // change to deployed url
+    images: [
+      {
+        url: 'public/og_preview.webp',
+        width: 800,
+        height: 600,
+        alt: 'LogicLike preview',
+      },
+    ],
+  },
 };
 
 export default function RootLayout({

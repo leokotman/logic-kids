@@ -2,6 +2,7 @@ import { isEqual } from 'lodash';
 
 import styles from './filter.module.scss';
 import { Button } from '../button/button';
+
 interface IFilterProps {
   topics: string[];
   chosenTag: string;
