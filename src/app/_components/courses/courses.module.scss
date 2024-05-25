@@ -1,6 +1,9 @@
 .section {
+  flex: 1 1 565px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 2px;
-  grid-row-gap: 2px;
+  grid-column-gap: 18px;
+  grid-row-gap: 18px;
+  width: calc(100% - var(--nav-width) - 20px);
+  min-width: 400px;
 }

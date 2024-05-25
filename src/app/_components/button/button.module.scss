@@ -1,13 +1,16 @@
 .button {
   border: 1px solid transparent;
   background-color: white;
-  border-radius: 5px;
+  border-radius: 12px;
   padding: 10px;
   cursor: pointer;
+  font-size: inherit;
+  font-weight: inherit;
+  text-align: left;
 }
 
 .active {
-  background-color: green;
+  background-color: var(--active-green);
   color: white;
 }
 
